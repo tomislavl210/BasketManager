@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.lovrekovic.basketmanager.auth.view.RegisterFragment" />
+        <variable
+            name="viewModel"
+            type="com.lovrekovic.basketmanager.auth.viewmodel.RegisterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".auth.view.RegisterFragment">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background_gradient"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/Fragment_Register_Photo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/jordan_image"
+            android:layout_marginTop="36dp"
+            android:onClick="@{() -> fragment.openPicker()}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/Fragment_Register_ChangePhotoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_profile_photo"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/andada"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/Fragment_Register_Photo"
+            app:layout_constraintStart_toStartOf="@id/Fragment_Register_Photo"
+            app:layout_constraintEnd_toEndOf="@id/Fragment_Register_Photo" />
+
+
+        <EditText
+            android:id="@+id/Fragment_Register_Username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_text_rectangle"
+            android:fontFamily="@font/andada"
+            android:hint="@string/username"
+            android:textColor="@color/text_gray"
+            android:textColorHint="@color/text_gray"
+            android:padding="10dp"
+            android:text="@={viewModel.username}"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Fragment_Register_ChangePhotoText" />
+
+        <EditText
+            android:id="@+id/Fragment_Register_NameSurname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_text_rectangle"
+            android:fontFamily="@font/andada"
+            android:hint="@string/name_surname"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/text_gray"
+            android:textColorHint="@color/text_gray"
+            android:padding="10dp"
+            android:text="@={viewModel.nameSurname}"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Fragment_Register_Username" />
+
+        <EditText
+            android:id="@+id/Fragment_Register_Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_text_rectangle"
+            android:fontFamily="@font/andada"
+            android:hint="@string/email"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/text_gray"
+            android:textColorHint="@color/text_gray"
+            android:padding="10dp"
+            android:text="@={viewModel.email}"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Fragment_Register_NameSurname" />
+
+        <EditText
+            android:id="@+id/Fragment_Register_Password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_text_rectangle"
+            android:fontFamily="@font/andada"
+            android:hint="@string/password"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/text_gray"
+            android:textColorHint="@color/text_gray"
+            android:padding="10dp"
+            android:text="@={viewModel.password}"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Fragment_Register_Email" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mail"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toTopOf="@id/Fragment_Register_Email"
+            app:layout_constraintEnd_toEndOf="@id/Fragment_Register_Email"
+            app:layout_constraintBottom_toBottomOf="@id/Fragment_Register_Email" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_lock"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toTopOf="@id/Fragment_Register_Password"
+            app:layout_constraintEnd_toEndOf="@id/Fragment_Register_Password"
+            app:layout_constraintBottom_toBottomOf="@id/Fragment_Register_Password" />
+
+        <Button
+            android:id="@+id/Fragment_Register_Register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green_button"
+            android:text="@string/register"
+            android:textAllCaps="false"
+            android:fontFamily="@font/andada"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:onClick="@{() -> viewModel.register()}"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Fragment_Register_Password"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

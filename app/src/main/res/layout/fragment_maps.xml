@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.lovrekovic.basketmanager.main.maps.viewmodel.MapsViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".main.maps.view.MapsFragment">
+
+        <EditText
+            android:id="@+id/Fragment_Maps_SearchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:hint="@string/pick_location"
+            android:padding="15dp"
+            android:text="@={viewModel.searchText}"
+            android:singleLine="true"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:fontFamily="@font/andada"
+            android:background="@drawable/input_text_rectangle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search_normal"
+            android:layout_margin="15dp"
+            android:onClick="@{() -> viewModel.searchGameByLocation()}"
+            app:layout_constraintTop_toTopOf="@id/Fragment_Maps_SearchBar"
+            app:layout_constraintEnd_toEndOf="@id/Fragment_Maps_SearchBar"
+            app:layout_constraintBottom_toBottomOf="@id/Fragment_Maps_SearchBar" />
+
+
+        <fragment
+            android:id="@+id/Fragment_Maps_Map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent"
+            map:uiRotateGestures="true"
+            map:uiZoomControls="false" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

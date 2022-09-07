@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "234149384750",
+    "project_id": "basketmanager-80a9e",
+    "storage_bucket": "basketmanager-80a9e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234149384750:android:59c720a0a333a5ee9545bf",
+        "android_client_info": {
+          "package_name": "com.lovrekovic.basketmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234149384750-radb6ft76u7rkvc88jef5frtp7ihgugc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_obHdZlpb2fJn2c_w_lPv59cGQGyGB7c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234149384750-radb6ft76u7rkvc88jef5frtp7ihgugc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

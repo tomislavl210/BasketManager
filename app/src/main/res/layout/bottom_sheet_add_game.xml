@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.lovrekovic.basketmanager.main.addgame.view.AddGameFragment" />
+
+        <variable
+            name="viewModel"
+            type="com.lovrekovic.basketmanager.main.addgame.viewmodel.AddGameViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/background_gradient" />
+
+
+                <RadioGroup
+                    android:id="@+id/Fragment_AddGame_RadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/BottomSheet_AddGame_GuidVer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5" />
+
+                        <RadioButton
+                            android:id="@+id/Fragment_AddGame_Type1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/radio_game_type_selector"
+                            android:button="@android:color/transparent"
+                            android:checked="false"
+                            android:fontFamily="@font/andada"
+                            android:gravity="center"
+                            android:onClick="@{(view) -> fragment.onRadioButtonChecked(view)}"
+                            android:text="@string/_1v1"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            app:layout_constraintEnd_toStartOf="@id/BottomSheet_AddGame_GuidVer"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <RadioButton
+                            android:id="@+id/Fragment_AddGame_Type2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/radio_game_type_selector"
+                            android:button="@android:color/transparent"
+                            android:checked="false"
+                            android:fontFamily="@font/andada"
+                            android:gravity="center"
+                            android:onClick="@{(view) -> fragment.onRadioButtonChecked(view)}"
+                            android:text="@string/_3v3"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            app:layout_constraintEnd_toStartOf="@id/BottomSheet_AddGame_GuidVer"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/Fragment_AddGame_Type1" />
+
+                        <RadioButton
+                            android:id="@+id/Fragment_AddGame_Type3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/radio_game_type_selector"
+                            android:button="@android:color/transparent"
+                            android:checked="false"
+                            android:fontFamily="@font/andada"
+                            android:gravity="center"
+                            android:onClick="@{(view) -> fragment.onRadioButtonChecked(view)}"
+                            android:text="@string/_5v5"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            app:layout_constraintEnd_toEndOf="@id/BottomSheet_AddGame_GuidVer"
+                            app:layout_constraintStart_toStartOf="@id/BottomSheet_AddGame_GuidVer"
+                            app:layout_constraintTop_toBottomOf="@id/Fragment_AddGame_Type2" />
+
+                        <RadioButton
+                            android:id="@+id/Fragment_AddGame_Type4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/radio_game_type_selector"
+                            android:button="@android:color/transparent"
+                            android:checked="false"
+                            android:fontFamily="@font/andada"
+                            android:gravity="center"
+                            android:onClick="@{(view) -> fragment.onRadioButtonChecked(view)}"
+                            android:text="@string/_2v2"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/BottomSheet_AddGame_GuidVer"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <RadioButton
+                            android:id="@+id/Fragment_AddGame_Type5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/radio_game_type_selector"
+                            android:button="@android:color/transparent"
+                            android:checked="false"
+                            android:fontFamily="@font/andada"
+                            android:gravity="center"
+                            android:onClick="@{(view) -> fragment.onRadioButtonChecked(view)}"
+                            android:text="@string/_4v4"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/BottomSheet_AddGame_GuidVer"
+                            app:layout_constraintTop_toBottomOf="@id/Fragment_AddGame_Type4" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/BottomSheet_AddGame_DateAndTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/green_button"
+                    android:text="@string/date_and_time"
+                    android:textAllCaps="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Fragment_AddGame_RadioGroup" />
+
+                <Button
+                    android:id="@+id/BottomSheet_AddGame_Add"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/green_button"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/add"
+                    android:textAllCaps="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/BottomSheet_AddGame_DateAndTime" />
+
+                <DatePicker
+                    android:id="@+id/BottomSheet_AddGame_DatePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:day="@={viewModel.day}"
+                    android:month="@={viewModel.month}"
+                    android:year="@={viewModel.year}"
+                    android:background="@color/green"
+                    android:layout_marginTop="30dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/BottomSheet_AddGame_Add" />
+
+                <TimePicker
+                    android:id="@+id/BottomSheet_AddGame_TimePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:hour="@={viewModel.hour}"
+                    android:minute="@={viewModel.minute}"
+                    android:timePickerMode="spinner"
+                    android:background="@color/green"
+                    android:visibility="gone"
+                    android:layout_marginBottom="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/BottomSheet_AddGame_DatePicker" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

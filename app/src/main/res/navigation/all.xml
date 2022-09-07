@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/all"
+    app:startDestination="@id/allGamesFragment">
+
+    <fragment
+        android:id="@+id/allGamesFragment"
+        android:name="com.lovrekovic.basketmanager.main.allgames.view.AllGamesFragment"
+        android:label="AllGamesFragment"
+        tools:layout="@layout/fragment_all_games">
+        <action
+            android:id="@+id/action_allGamesFragment_to_playerListFragment"
+            app:destination="@id/playerListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerListFragment"
+        android:name="com.lovrekovic.basketmanager.main.allgames.view.PlayerListFragment"
+        android:label="PlayerListFragment"
+        tools:layout="@layout/fragment_player_list">
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+</navigation>

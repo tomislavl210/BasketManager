@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/background_gradient.xml" value="0.3185" />
+        <entry key="app/src/main/res/drawable/bottom_sheet_join_game.xml" value="0.3185" />
+        <entry key="app/src/main/res/drawable/game_drawable.xml" value="0.3185" />
+        <entry key="app/src/main/res/drawable/green_button.xml" value="0.3185" />
+        <entry key="app/src/main/res/drawable/ic_add_square.xml" value="0.3195" />
+        <entry key="app/src/main/res/drawable/ic_all_games.xml" value="0.3195" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.3195" />
+        <entry key="app/src/main/res/drawable/input_text_rectangle.xml" value="0.3185" />
+        <entry key="app/src/main/res/drawable/jordan_image.xml" value="0.3195" />
+        <entry key="app/src/main/res/drawable/radio_game_type_regular.xml" value="0.3195" />
+        <entry key="app/src/main/res/drawable/radio_game_type_selected.xml" value="0.3195" />
+        <entry key="app/src/main/res/drawable/radio_game_type_selector.xml" value="0.3185" />
+        <entry key="app/src/main/res/drawable/rndbtn.xml" value="0.3195" />
+        <entry key="app/src/main/res/drawable/rounded_corner_color_button.xml" value="0.3185" />
+        <entry key="app/src/main/res/layout/activity_auth.xml" value="0.15416666666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/layout/bottom_sheet_add_game.xml" value="0.4727838258164852" />
+        <entry key="app/src/main/res/layout/bottom_sheet_join_game.xml" value="0.315625" />
+        <entry key="app/src/main/res/layout/fragment_add_game.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/layout/fragment_all_games.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/layout/fragment_maps.xml" value="0.165625" />
+        <entry key="app/src/main/res/layout/fragment_player_list.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/layout/fragment_user_games.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/layout/item_game.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/layout/item_player.xml" value="0.5" />
+        <entry key="app/src/main/res/menu/navigation_menu.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/xml/file_paths.xml" value="0.315625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

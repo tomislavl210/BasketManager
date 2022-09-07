@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.lovrekovic.basketmanager.main.profile.view.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_userGamesFragment"
+            app:destination="@id/userGamesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userGamesFragment"
+        android:name="com.lovrekovic.basketmanager.main.profile.view.UserGamesFragment"
+        android:label="UserGamesFragment"
+        tools:layout="@layout/fragment_user_games">
+        <argument
+            android:name="isItUpcoming"
+            app:argType="boolean" />
+    </fragment>
+</navigation>

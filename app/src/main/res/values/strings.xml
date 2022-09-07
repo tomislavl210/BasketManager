@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">BasketManager</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="name_surname">Name/Surname</string>
+    <string name="email">Email</string>
+    <string name="maps">Maps</string>
+    <string name="all_games">All games</string>
+    <string name="new_game">New game</string>
+    <string name="profile">Profile</string>
+    <string name="pick_location">Pick location</string>
+    <string name="search">Search</string>
+    <string name="add_location">Add Location</string>
+    <string name="_1v1">1v1</string>
+    <string name="_3v3">3v3</string>
+    <string name="date_and_time">Date and Time</string>
+    <string name="add">Add</string>
+    <string name="_2v2">2v2</string>
+    <string name="_4v4">4v4</string>
+    <string name="_5v5">5v5</string>
+    <string name="add_profile_photo">Add profile photo</string>
+    <string name="player_list">PLAYER_LIST</string>
+    <string name="show_players">Show players</string>
+    <string name="count_me_in">Count me in</string>
+    <string name="change_picture">Change picture</string>
+    <string name="played_matches">Played matches</string>
+    <string name="log_out">Log out</string>
+    <string name="upcoming_matches">Upcoming Matches</string>
+    <string name="upcoming_games">Upcoming games</string>
+    <string name="game_history">Game history</string>
+</resources>
